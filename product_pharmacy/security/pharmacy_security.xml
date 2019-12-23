@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+    <record id="group_show_product_pharmacy" model="res.groups">
+        <field name="name">Show product pharmacy</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+        <field name="comment">Show product pharmacy</field>
+    </record>
+</data>
+</odoo>

@@ -1,0 +1,12 @@
+<odoo>
+
+    <!--Report for hotel folio -->
+    <report id="report_hotel_management"
+            string="Apart Folio"
+            model="apart.folio"
+            report_type="qweb-pdf"
+            file="apart.report_apart_folio"
+            name="apart.report_apart_folio"
+            menu="False" />
+
+</odoo>

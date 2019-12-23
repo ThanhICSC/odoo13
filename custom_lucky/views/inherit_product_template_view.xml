@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="view_product_template_inherit" model="ir.ui.view">
+        <field name="name">product.template</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <field name="barcode" position="after">
+                <field name="arabic_name"/>
+            </field>
+            <field name="categ_id" position="after">
+		<field name="product_speed_state" readonly="1"/>
+            </field>
+            <field name="list_price" position="after">
+		<!-- <field name="market_price"/> -->
+        <label for="market_price"/>
+        <div class="o_row">
+            <field name="market_price"/>
+            <field name="market_price_currency"/>
+        </div>
+        <!-- <field name="last_purchase_price"/> -->
+        <label for="last_purchase_price"/>
+        <div class="o_row">
+            <field name="last_purchase_price"/>
+            <field name="last_po_currency" readonly="1"/>
+        </div>
+		<field name="min_qty" />
+		<field name="price_diff" />
+        <field name="available"/>
+            </field>
+	   
+        </field>
+    </record>
+
+
+     <record id="view_product_template_kanban_inherit" model="ir.ui.view">
+        <field name="name">product.template</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_kanban_view"/>
+        <field name="arch" type="xml">
+            <strong class="o_kanban_record_title" position="after">
+                    <field name="product_speed_state"/>
+                </strong>
+	   
+        </field>
+    </record>
+
+    <record id="view_product_product_inherit" model="ir.ui.view">
+        <field name="name">product.product</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <field name="barcode" position="after">
+		<field name="product_speed_state" />
+            </field>
+        </field>
+    </record>
+
+     <record id="view_product_template_group_inherit" model="ir.ui.view">
+        <field name="name">product.product</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view"/>
+        <field name="arch" type="xml">
+            <filter name="filter_to_sell" position="after">
+		<filter string="Product Speed State" name="groupby_state" domain="[]" context="{'group_by': 'product_speed_state'}"/>
+            </filter>
+        </field>
+    </record>
+
+
+</odoo>

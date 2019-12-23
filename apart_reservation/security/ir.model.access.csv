@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_apart_reservation_user,apart.reservation.user,model_apart_reservation,apart.group_apart_user,1,1,1,0
+access_apart_reservation_line_user,apart_reservation.line.user,model_apart_reservation_line,apart.group_apart_user,1,1,1,0
+access_apart_flat_reservation_line_user,apart_flat_reservation.line.user,model_apart_flat_reservation_line,apart.group_apart_user,1,1,1,0
+access_apart_reservation_manager,apart_reservation.manager,model_apart_reservation,apart.group_apart_manager,1,1,1,1
+access_apart_reservation_line_manager,apart_reservation.line.manager,model_apart_reservation_line,apart.group_apart_manager,1,1,1,1
+access_apart_flat_reservation_line_manager,apart_flat_reservation.line.manager,model_apart_flat_reservation_line,apart.group_apart_manager,1,1,1,1
+access_flat_reservation_summary_manager,apart_flat_reservation_summary.manager,model_flat_reservation_summary,apart.group_apart_manager,1,1,1,1

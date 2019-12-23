@@ -1,0 +1,12 @@
+<odoo>
+
+    <template id="assets_backend_" name="Quick Reservation Summary"
+        inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/apart_reservation/static/src/css/flat_summary.css" />
+            <script type="text/javascript"
+                src="/apart_reservation/static/src/js/apart_flat_summary.js"></script>
+        </xpath>
+    </template>
+
+</odoo>

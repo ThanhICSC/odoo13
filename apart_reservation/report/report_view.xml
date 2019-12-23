@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xml>
+<odoo>
+
+    <!--Report for apart check-in details -->
+    <report id="apart_checkin_details"
+            string="CheckIn Detail"
+            model="apart.reservation"
+            report_type="qweb-pdf"
+            file="apart_reservation.report_checkin_qweb"
+            name="apart_reservation.report_checkin_qweb"
+            menu="False" />
+
+    <!--Report for apart flat reservation details -->
+    <report id="apart_flatres_details"
+            string="flat Reservation Detail"
+            model="apart.reservation"
+            report_type="qweb-pdf"
+            file="apart_reservation.report_flatres_qweb"
+            name="apart_reservation.report_flatres_qweb"
+            menu="False" />
+
+    <!--Report for apart check-out details -->
+    <report id="apart_checkout_details"
+            string="CheckOut Detail"
+            model="apart.reservation"
+            report_type="qweb-pdf"
+            file="apart_reservation.report_checkout_qweb"
+            name="apart_reservation.report_checkout_qweb"
+            menu="False" />
+
+    <!--Report for apart Maximum used flat details -->
+    <report id="apart_maxflat_details"
+            string="Maxflat Detail"
+            model="apart.reservation"
+            report_type="qweb-pdf"
+            file="apart_reservation.report_maxflat_qweb"
+            name="apart_reservation.report_maxflat_qweb"
+            menu="False" />
+
+</odoo>

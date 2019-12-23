@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--Extending existing form view for Quantity per Warehouse field-->
+    <record id="product_template_form_view_inherit_pharmacy" model="ir.ui.view">
+        <field name="name">product.template.common.form.regno</field>
+<field name="name">product.template.common.form.genname</field>
+<field name="name">product.template.common.form.dossage</field>
+<field name="name">product.template.common.form.routadm</field>
+<field name="name">product.template.common.form.shelflife</field>
+<field name="name">product.template.common.form.storagecon</field>
+<field name="name">product.template.common.form.manufature</field>
+<field name="name">product.template.common.form.agent</field>
+<field name="name">product.template.common.form.authstatu</field>
+
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml"> 
+            <xpath expr="//field[@name='type']" position="after">
+
+<field name="regno" />
+<field name="genname" />
+<field name="dossage" />
+<field name="routadm" />
+<field name="shelflife" />
+<field name="storagecon" />
+<field name="manufature" />
+<field name="agent" />
+<field name="authstatu" />
+            </xpath> 
+        </field>
+    </record>
+
+    
+</odoo>
