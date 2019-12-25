@@ -30,5 +30,14 @@ class ProjectProject(models.Model):
                     target.append(doc.makeelement(
                         'field', {'name': 'date'}
                     ))
+
+                if not doc.xpath("//field[@name='datenow']"):
+                    target.append(doc.makeelement(
+                        'field', {'name': 'datenow'
+'default' : 'lambda *a: datetime.now()'
+
+
+}
+                    ))
                 res['arch'] = etree.tostring(doc, encoding='unicode')
         return res

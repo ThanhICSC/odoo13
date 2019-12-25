@@ -16,3 +16,13 @@ class ProjectTask(models.Model):
         'Project Deadline',
         related='project_id.date'
     )
+
+
+project_datenow = fields.Date(
+        'Project Date Today',
+        related='project_id.datenow',
+        default=lambda *a: datetime.now()
+    )
+
+
+
